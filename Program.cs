@@ -6,6 +6,7 @@ namespace FifthModuleProject
     {
         static void Main(string[] args)
         {
+            //Все комментарии в файле Readme.md
             (string Name, string LastName, int Age, string[] Pets, string[] favcolors) User = EnterUser();
             PrintTuple(User);
         }
@@ -85,12 +86,12 @@ namespace FifthModuleProject
             do
             {
                 string temp = Console.ReadLine();
-                if ((temp == "Да") | (temp == "да"))
+                if ((temp == "Да") | (temp == "да") | (temp == "ДА"))
                 {
                     result = true;
                     check = true;
                 }
-                else if ((temp == "Нет") | (temp == "нет"))
+                else if ((temp == "Нет") | (temp == "нет") | (temp == "НЕТ"))
                 {
                     result = false;
                     check = true;
@@ -108,13 +109,13 @@ namespace FifthModuleProject
             Console.WriteLine("Ваш возраст: {0}", User.Age);
             if (User.Pets.GetUpperBound(0)+1>0)
             {
-                Console.WriteLine("У вас есть питомцы:");
+                Console.WriteLine("У Вас есть питомцы:");
                 foreach (var pet in User.Pets)
                 {
                     Console.WriteLine(pet);
                 }
             }
-            else if (User.Pets.GetUpperBound(0)+1 == 0) Console.WriteLine("У вас нет питомцев");
+            else if (User.Pets.GetUpperBound(0)+1 == 0) Console.WriteLine("У Вас нет питомцев");
             if (User.favcolors.GetUpperBound(0) + 1 > 0)
             {
                 Console.WriteLine("Количество любимых Вами цветов: {0}. Вот они:", User.favcolors.GetUpperBound(0)+1);
@@ -123,7 +124,7 @@ namespace FifthModuleProject
                     Console.WriteLine(color);
                 }
             }
-            else if (User.favcolors.GetUpperBound(0) + 1 == 0) Console.WriteLine("У вас нет любимых цветов");
+            else if (User.favcolors.GetUpperBound(0) + 1 == 0) Console.WriteLine("У Вас нет любимых цветов");
 
         }
     }
